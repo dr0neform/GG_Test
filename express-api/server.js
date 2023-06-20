@@ -6,7 +6,9 @@ const connectDB = require("./db");
 connectDB();
 const server = app.listen(PORT, () =>
   console.log(`Server Connected to port ${PORT}`)
+
 )
+
 // Handling Error
 process.on("unhandledRejection", err => {
   console.log(`An error occurred: ${err.message}`)
