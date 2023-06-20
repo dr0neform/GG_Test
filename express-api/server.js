@@ -16,3 +16,4 @@ process.on("unhandledRejection", err => {
 })
 app.use(express.json())
 app.use("/api/auth", require("./Auth/route"))
+app.use("/api/watch", require("./Watch/route"))
