@@ -46,7 +46,7 @@ exports.unwatch = async (req, res, next) => {
 }
 
 exports.fetch = async (req, res, next) => {
-  const { username, show_id, season_nr, episode_nr } = req.body
+  const username = req.query.username
   try {
     await Watched.find({username:username}).then(results =>
       res.status(200).json({
