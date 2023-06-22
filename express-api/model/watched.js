@@ -1,24 +1,5 @@
 const Mongoose = require("mongoose")
-const WatchedSchema = new Mongoose.Schema({
-  username: {
-    type: String,
-    unique: false,
-    required: true,
-  },
-  show_id: {
-    type: String,
-    required: true,
-  },
-  season_nr: {
-    type: Number,
-    required: true,
-  },
-  episode_nr: {
-    type: Number,
-    required: true,
-  },
-
-})
+const WatchedSchema = new Mongoose.Schema({},{strict:false})
 
 const Watched = Mongoose.model("watched", WatchedSchema)
 module.exports = Watched

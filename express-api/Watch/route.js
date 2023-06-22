@@ -1,8 +1,9 @@
 const express = require("express")
 const router = express.Router()
-const { watch, unwatch, fetch } = require("./watch")
-router.route("/watch").post(watch)
-router.route("/fetch").get(fetch)
+const { update, unwatch, fetch,addShow } = require("./watch")
+router.route("/").put(update)
+router.route("/").get(fetch)
 router.route("/unwatch").delete(unwatch);
+router.route("/").post(addShow);
 
 module.exports = router
